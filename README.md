@@ -1,7 +1,18 @@
 # ToDo-app-Swift-and-Node-JS
-A simple ToDo app which connects iPhone app with Node JS server and saves the todo task in server as a JSON File
+A simple ToDo app which connects iPhone app with Node 
+JS server and saves the todo task in server as a JSON File
 
+Node Modules used
+Express : To determine how to route the incomming http request.
+https://www.npmjs.com/package/express
 
+FileSystem(fs) in-built module for manipulating file related tasks.
+
+Body parser:A middle-ware used for body parsing along with Node.js
+https://www.npmjs.com/package/body-parser
+
+API Testing Tool: PostMan - The Collaboration Platform for API Development
+https://www.postman.com/
 
 
 Server Side:  <img src="https://img.shields.io/badge/Language-JavaScript-yellow" alt="JavaScript"> 
