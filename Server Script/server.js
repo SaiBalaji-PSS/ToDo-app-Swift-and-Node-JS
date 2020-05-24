@@ -1,4 +1,5 @@
 let bodyParser = require('body-parser');
+let filesystem = require('fs')
 let app = require('express')();
 let port = 3003;
 
@@ -12,15 +13,20 @@ let todos = [
 
 app.get('/', (request, response) => response.send({items: todos}))
 
+
 app.post('/add', (request, response) => {
     if (request.body && request.body.item !== "") {
         todos.push(request.body);
         console.log(todos);
         response.send({items: todos});
+        filesystem.writeFile('data.txt',JSON.stringify(todos),function(err)
+      {
+        console.log("File saved");
+      })
     } else {
         response.status(400).send({message: "Todo item must have a title"})
     }
-    
+
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
