@@ -29,9 +29,11 @@ https://www.postman.com/
 
 
 # Client Side: <img src="https://img.shields.io/badge/Language-Swift-orange" alt="Swift"> 
-Platform:  <img src="https://img.shields.io/badge/Platform-iOS-blue" alt="iOS"> 
-
 https://swift.org/
+
+# Platform:  <img src="https://img.shields.io/badge/Platform-iOS-blue" alt="iOS"> 
+https://developer.apple.com/ios/
+
 
 ![iphoneclient](https://user-images.githubusercontent.com/51410810/82757037-87dd4980-9dfb-11ea-9d67-17d2b5719226.JPG)
 
