@@ -9,7 +9,6 @@ Server Side: JavaScript(Node JS)
 
 
 
-Client Side:  [![Generic badge](https://img.shields.io/badge/Language-Swift-orange](https://shields.io/)
-
+Client Side: <img src="https://img.shields.io/badge/Language-Swift-orange" alt="Swift"> 
 
 ![iphoneclient](https://user-images.githubusercontent.com/51410810/82757037-87dd4980-9dfb-11ea-9d67-17d2b5719226.JPG)
