@@ -1,5 +1,5 @@
 # ToDo-app-Swift-and-Node-JS
-A simple ToDo which connects iPhone app with Node JS server.
+A simple ToDo app which connects iPhone app with Node JS server.
 
 
 
