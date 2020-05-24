@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="riY-x2-kko">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TodoVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TodoVC" customModule="todoappclient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BIu-aZ-Ffi">
+                                <rect key="frame" x="0.0" y="75" width="320" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wpX-ZK-rqC">
+                                <rect key="frame" x="0.0" y="113" width="320" height="29"/>
+                                <segments>
+                                    <segment title="High"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Low"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SUW-N6-wJu">
+                                <rect key="frame" x="0.0" y="153" width="320" height="415"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="todoc" rowHeight="60" id="gWz-gw-rNV" customClass="TodoCell" customModule="todoappclient" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gWz-gw-rNV" id="zGZ-Za-1q8">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy some books and pens" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biW-1j-wa3">
+                                                    <rect key="frame" x="15" y="19" width="201" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJM-90-rjX">
+                                                    <rect key="frame" x="275" y="14" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="1" green="0.48852495070000002" blue="0.11625040690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="N56-kO-frf"/>
+                                                        <constraint firstAttribute="width" constant="30" id="Nye-jZ-K3D"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="biW-1j-wa3" firstAttribute="top" secondItem="zGZ-Za-1q8" secondAttribute="topMargin" constant="8" id="19e-l6-hOd"/>
+                                                <constraint firstItem="biW-1j-wa3" firstAttribute="leading" secondItem="zGZ-Za-1q8" secondAttribute="leadingMargin" id="7Rh-cX-rKS"/>
+                                                <constraint firstItem="BJM-90-rjX" firstAttribute="trailing" secondItem="zGZ-Za-1q8" secondAttribute="trailingMargin" id="W7V-At-XfG"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="BJM-90-rjX" secondAttribute="bottom" constant="5" id="bSi-PB-S2y"/>
+                                                <constraint firstItem="BJM-90-rjX" firstAttribute="top" secondItem="zGZ-Za-1q8" secondAttribute="topMargin" constant="3" id="c5o-lf-pWl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="itemLBL" destination="biW-1j-wa3" id="dGa-pj-3Ba"/>
+                                            <outlet property="priorityView" destination="BJM-90-rjX" id="sxv-bc-uTO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wpX-ZK-rqC" secondAttribute="trailing" id="2Gu-np-fcl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SUW-N6-wJu" secondAttribute="trailing" id="B0x-eJ-XZI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BIu-aZ-Ffi" secondAttribute="trailing" id="CKQ-m4-vRj"/>
+                            <constraint firstItem="SUW-N6-wJu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HhE-Qm-3KM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SUW-N6-wJu" secondAttribute="bottom" id="OBD-Sw-6bB"/>
+                            <constraint firstItem="wpX-ZK-rqC" firstAttribute="top" secondItem="BIu-aZ-Ffi" secondAttribute="bottom" constant="8" id="Wk3-Ea-CAg"/>
+                            <constraint firstItem="BIu-aZ-Ffi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="aiB-fW-fsU"/>
+                            <constraint firstItem="wpX-ZK-rqC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iDh-Mb-VQw"/>
+                            <constraint firstItem="SUW-N6-wJu" firstAttribute="top" secondItem="wpX-ZK-rqC" secondAttribute="bottom" constant="12" id="lf2-pm-689"/>
+                            <constraint firstItem="BIu-aZ-Ffi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xab-0S-xDF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="w9r-sf-gIC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KIn-dZ-k48">
+                            <connections>
+                                <action selector="addTodo:" destination="BYZ-38-t0r" id="Ah9-nn-by5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="prioritysegment" destination="wpX-ZK-rqC" id="si1-q5-xEv"/>
+                        <outlet property="todoitemtxt" destination="BIu-aZ-Ffi" id="jI5-vb-v1L"/>
+                        <outlet property="todotableview" destination="SUW-N6-wJu" id="E6G-jD-qSY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="855" y="133.09859154929578"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ku7-g1-HvN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="riY-x2-kko" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZUx-XQ-8m0">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zL4-d6-bTh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xx2-MM-pa9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-82.400000000000006" y="-564.46776611694156"/>
+        </scene>
+    </scenes>
+</document>
